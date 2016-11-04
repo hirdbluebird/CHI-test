@@ -1,0 +1,26 @@
+{
+  "name": "chi_test",
+  "version": "1.0.0",
+  "description": "Test markup for CHI software",
+  "main": "index.hmtl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hirdbluebird/CHI-test.git"
+  },
+  "author": "hirdbluebird",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hirdbluebird/CHI-test/issues"
+  },
+  "homepage": "https://github.com/hirdbluebird/CHI-test#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}
