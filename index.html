@@ -9,8 +9,14 @@
 
     <!-- Bootstrap -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+
+
+
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/all.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,7 +38,7 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">
-              <img src="" alt="">
+              <img src="assets/img/logo.png" alt="">
             </a>
           </div>
 
@@ -40,7 +46,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
             <ul class="nav navbar-nav">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Home v.1</a></li>
                   <li><a href="#">Home v.2</a></li>
@@ -52,208 +58,277 @@
               <li><a href="#">Contact Us</a></li>
             </ul>
             
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right country-nav">
               <!-- LANGUAGE DROPDOWN -->
-              <li class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                  <img src="" alt=""> French
+              <li class="dropdown nav-language-menu">
+                <button class="btn" type="button" data-toggle="dropdown">
+                  <i><img src="assets/img/flags/France.png" alt=""></i> French
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a href="#">English</a></li>
-                  <li><a href="#">Spanish</a></li>
-                  <li><a href="#">Italian</a></li>
+                  <li><a href="#"><i><img src="assets/img/flags/England.png" alt=""></i>English</a></li>
+                  <li><a href="#"><i><img src="assets/img/flags/Spain.png" alt=""></i>Spanish</a></li>
+                  <li><a href="#"><i><img src="assets/img/flags/Italy.png" alt=""></i>Italian</a></li>
                 </ul>
               </li>
 
               <!-- LOCATION DROPDOWN -->
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose Country <span class="caret"></span></a>
+              <li class="dropdown nav-country-menu">
+                <button class="btn" type="button" data-toggle="dropdown">
+                  <img src="assets/img/location-icon.png" alt=""> Choose Country
+                  <span class="caret"></span>
+                </button>
                 <ul class="dropdown-menu">
                   <li><a href="#">England</a></li>
                   <li><a href="#">Spain</a></li>
                   <li><a href="#">Italia</a></li>
                 </ul>
               </li>
-
-              <li><a href="#">Register</a></li>
-              <li><a href="#">Sign In</a></li>
             </ul>
 
           </div><!-- /.navbar-collapse -->
+            
+          <div class="sign-links pull-right">
+            <a href="#" class="signup-link">Register</a>
+            <a href="#" class="signin-link">Sign In</a>
+          </div>
+
         </div><!-- /.container -->
       </nav>
     </header>
 
     <main>
 
-      <section class="book-form-section">
+      <section class="book-form-section dashed-border-bottom-section">
 
         <div class="container">
-          <div class="col-md-6">
+          <div class="row">
 
-            <ul class="nav nav-tabs">
-              <li class="active"><a data-toggle="tab" href="#home">Book a Car</a></li>
-              <li><a data-toggle="tab" href="#menu1">Manage Reservation</a></li>
-            </ul>
+            <div class="col-md-6">
+              <div class="tab-container">
+                
+                <ul class="nav nav-tabs">
+                  <li class="active"><a data-toggle="tab" href="#home">Book a Car</a></li>
+                  <li><a data-toggle="tab" href="#menu1">Manage Reservation</a></li>
+                </ul>
 
-            <div class="tab-content">
-              <div id="home" class="tab-pane fade in active">
+                <div class="tab-content">
+                  <div id="home" class="tab-pane fade in active">
 
-                <form action="" class="" type="POST">
-                  <div>
-                    <label>Location <a href="">Airport codes</a></label>
-                    <input type="text" name="">
-                    <label for="location_checkbox">Return at different location</label>
-                    <input type="checkbox" name="location_checkbox">
+                    <form action="" class="car-form" type="POST">
+                      <div class="location-wrapper">
+                        <label>Location <a href="">Airport codes</a></label>
+                        <input type="text" name="" placeholder="Enter airport, city or zip code">
+                        <label for="location_checkbox" class="checkbox-label">Return at different location</label>
+                        <input type="checkbox" name="location_checkbox" id="location_checkbox">
+                      </div>
+
+                      <div class="date-wrapper">
+                        <div>
+                          <label>pick-up date</label>
+                          <input type="text" name="date" id="pickupDate" class="date-input">
+                          <input type="time" name="">
+                        </div>
+                        <div>
+                          <label>drop-off date</label>
+                          <input type="text" name="" id="dropoffDate" class="date-input">
+                          <input type="time" name="">
+                        </div>
+                      </div>
+
+                      <div class="cartype-wrapper">
+                        <label>Car type</label>
+                        <select>
+                          <option value="">Standart</option>
+                          <option value="">Standart 2</option>
+                          <option value="">Standart 3</option>
+                        </select>
+
+                        <button type="submit">Continue <span class='caret caret-right'></span></button>
+                      </div>
+                    </form>
+
+                  </div>
+                  <div id="menu1" class="tab-pane fade">
+                    <h3>Menu 1</h3>
+                    <p>Some content in menu 1.</p>
                   </div>
 
-                  <div>
+                </div><!-- /.tab-content -->
+              </div><!-- /.tab-container -->
+            </div><!-- /.col-md-6 -->
+
+            <div class="col-md-6">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <h2>Great car hire deals.</h2>
+                    <p>Phasellus eget ultricies libero. Sed dolor turpis, malesuada vitae cursus a, auctor semper neque.</p>
+                    <a href="" class="read-more"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Learn more</a>
                     <div>
-                      <label>pick-up date</label>
-                      <input type="text" name="" id="pickupDate">
-                      <input type="time" name="">
+                      <img src="assets/img/slide.png" alt="">
                     </div>
+                  </div>
+
+                  <div class="item">
+                    <h2>Great car hire deals.</h2>
+                    <p>Phasellus eget ultricies libero. Sed dolor turpis, malesuada vitae cursus a, auctor semper neque.</p>
+                    <a href="" class="read-more"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Learn more</a>
                     <div>
-                      <label>drop-off date</label>
-                      <input type="text" name="" id="dropoffDate">
-                      <input type="time" name="">
+                      <img src="assets/img/slide.png" alt="">
                     </div>
                   </div>
 
-                  <div>
-                    <label>Car type</label>
-                    <select>
-                      <option value="">Standart</option>
-                      <option value="">Standart 2</option>
-                      <option value="">Standart 3</option>
-                    </select>
-
-                    <button type="submit">Continue <span class='caret caret-right'></span></button>
+                  <div class="item">
+                    <h2>Great car hire deals.</h2>
+                    <p>Phasellus eget ultricies libero. Sed dolor turpis, malesuada vitae cursus a, auctor semper neque.</p>
+                    <a href="" class="read-more"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Learn more</a>
+                    <div>
+                      <img src="assets/img/slide.png" alt="">
+                    </div>
                   </div>
-                </form>
 
+                </div>
               </div>
-              <div id="menu1" class="tab-pane fade">
-                <h3>Menu 1</h3>
-                <p>Some content in menu 1.</p>
-              </div>
-            </div>
-            
-          </div><!-- /.col-md-6 -->
+            </div><!-- /.col-md-6 -->
 
-          <div class="col-md-6">
-            <div class="slider">
-
-              <div class="slide">
-                <h2>Great car hire deals.</h2>
-                <p>Phasellus eget ultricies libero. Sed dolor turpis, malesuada vitae cursus a, auctor semper neque.</p>
-                <a href="" class="read-more">Learn more</a>
-              </div>
-
-            </div><!-- /.slider -->
-          </div><!-- /.col-md-6 -->
+          </div><!-- /.row -->
         </div><!-- /.container -->
       </section>
 
-      <section class="posts-and-benefits">
+      <section class="posts-and-benefits dashed-border-bottom-section">
         <div class="container">
+          <div class="row">
           
-          <div class="col-md-4">
-            <div class="post-thumbnail">
-              <h3>We are leading car rental agency with 300,000 Happy Customers.</h3>
-              <p>Morbi orci ante, consectetur id vestibulum quis, suscipit eu eros. Duis non egestas dolor. Duis non volutpat leo. Aliquam nisi eros, accumsan non gravida vitae, ultrices eu eros. Phasellus sagittis mattis tristique.</p>
-              <a href="" class="read-more">learn more</a>
+            <div class="col-md-4">
+              <div class="post-thumbnail">
+                <h3>We are leading car rental agency with 300,000 Happy Customers.</h3>
+                <p>Morbi orci ante, consectetur id vestibulum quis, suscipit eu eros. Duis non egestas dolor. Duis non volutpat leo. Aliquam nisi eros, accumsan non gravida vitae, ultrices eu eros. Phasellus sagittis mattis tristique.</p>
+                <a href="" class="read-more"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> learn more</a>
+              </div>
             </div>
-          </div>
 
-          <div class="col-md-4">
-            <div class="benefit">
-              <h4>Special low rates on car booking</h4>
-              <p>Nunc ut nibh enim, id dapibus quam. Mauris id est at diam rutrum ultricies. Vivamus et dolor velit. Nam congue blandit nulla sed tincidunt.</p>
+            <div class="col-md-4">
+              <div class="benefit">
+                <h4>
+                  <i><img src="assets/img/rates-icon.png" alt=""></i>
+                  Special low rates on car booking</h4>
+                <p>Nunc ut nibh enim, id dapibus quam. Mauris id est at diam rutrum ultricies. Vivamus et dolor velit. Nam congue blandit nulla sed tincidunt.</p>
+              </div>
+              <div class="benefit">
+                <h4><i><img src="assets/img/support-icon.png" alt=""></i>
+                  Dedicated customer support</h4>
+                <p>Praesent tempus egestas blandit. Nunc euismod volutpat ultrices. Nam fermentum nibh eget mi vehicula dictum.</p>
+              </div>
             </div>
-            <div class="benefit">
-              <h4>Dedicated customer support</h4>
-              <p>Praesent tempus egestas blandit. Nunc euismod volutpat ultrices. Nam fermentum nibh eget mi vehicula dictum.</p>
-            </div>
-          </div>
 
-          <div class="col-md-4">
-            <div class="benefit">
-              <h4>Manage your booking online</h4>
-              <p>Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <div class="col-md-4">
+              <div class="benefit">
+                <h4><i><img src="assets/img/manage-icon.png" alt=""></i>
+                  Manage your booking online</h4>
+                <p>Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+              </div>
+              <div class="benefit">
+                <h4><i><img src="assets/img/spool-icon.png" alt=""></i>
+                  You are guaranteed a car</h4>
+                <p>Donec vitae orci metus, et viverra ipsum. Curabitur tristique tristique lacinia. Sed sagittis placerat vestibulum.</p>
+              </div>
             </div>
-            <div class="benefit">
-              <h4>You are guaranteed a car</h4>
-              <p>Donec vitae orci metus, et viverra ipsum. Curabitur tristique tristique lacinia. Sed sagittis placerat vestibulum.</p>
-            </div>
-          </div>
+
+          </div><!-- /.row -->
         </div><!-- /.container --> 
       </section>
 
       <section class="newsletter-section">
         <div class="container">
-          <form action="" class="" type="POST">
-            <p>Signup for our email to celebrate great specials</p>
-            <input type="text" name="" placeholder="name">
-            <input type="email" name="" placeholder="email">
-            <button type="submit">signup</button>
-          </form>
-        </div>
+          <div class="row">
+            <div class="col-md-12">
+
+              <form action="" class="newsletter-form" type="POST">
+                <p>Signup for our email to celebrate great specials</p>
+                <input type="text" name="" placeholder="Name">
+                <input type="email" name="" placeholder="Email">
+                <button type="submit">signup</button>
+              </form>
+
+            </div><!-- /.col-md-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
       </section>
     </main>
 
     <footer>
       <section class="footer-main">
         <div class="container">
-          <div class="col-md-5">
-            <ul class="site-map-column">
-              <li><h4>Rently</h4></li>
-              <li><a href="">Home</a></li>
-              <li><a href="">Privacy</a></li>
-              <li><a href="">Services</a></li>
-              <li><a href="">Partners</a></li>
-              <li><a href="">News</a></li>
-            </ul>
-            <ul class="site-map-column">
-              <li><h4>About</h4></li>
-              <li><a href="">Latest News</a></li>
-              <li><a href="">Press Releases</a></li>
-              <li><a href="">Careers</a></li>
-              <li><a href="">Terms of Use</a></li>
-            </ul>
-            <ul class="site-map-column">
-              <li><h4>Support</h4></li>
-              <li><a href="">Contact Us</a></li>
-              <li><a href="">Find Your Invoice</a></li>
-              <li><a href="">FAQ</a></li>
-            </ul>
-          </div><!-- /.col-md-5 -->
+          <div class="row">
+            <div class="col-md-5">
+              <ul class="site-map-column">
+                <li><h4>Rently</h4></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Partners</a></li>
+                <li><a href="">News</a></li>
+              </ul>
+              <ul class="site-map-column">
+                <li><h4>About</h4></li>
+                <li><a href="">Latest News</a></li>
+                <li><a href="">Press Releases</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Terms of Use</a></li>
+              </ul>
+              <ul class="site-map-column">
+                <li><h4>Support</h4></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Find Your Invoice</a></li>
+                <li><a href="">FAQ</a></li>
+              </ul>
+            </div><!-- /.col-md-5 -->
 
-          <div class="col-md-3">
-            <div class="footer-tweets">
-              <h4>Recent tweets</h4>
-              <p class="footer-tweets-text">
-                <a href="">@bestwebsoft</a> velit, vitae tincidunt orci. Proin vitae auctor lectus. <a href="http://bestwebsoft.com/">http://bestwebsoft.com/</a>
-              </p>
-              <p class="footer-tweets-date">posted 2 days ago</p>
-            </div>
-          </div><!-- /.col-md-3 -->
+            <div class="col-md-3">
+              <div class="footer-tweets">
+                <h4><i class="fa fa-twitter"></i>Recent tweets</h4>
+                <p class="footer-tweets-text">
+                  <a href="">@bestwebsoft</a> velit, vitae tincidunt orci. Proin vitae auctor lectus. <a href="http://bestwebsoft.com/">http://bestwebsoft.com/</a>
+                </p>
+                <p class="footer-tweets-date">posted 2 days ago</p>
+              </div>
+            </div><!-- /.col-md-3 -->
 
-          <div class="col-md-4">
-            <div class="online-support">
-              <div></div>
-              <p>online support</p>
-              <a href="tel:+1(555)555-28-28">+1 (555) 555 - 28 - 28</a>
-              <a href="mail:sales@bestwebsoft.com">sales@bestwebsoft.com</a>
+            <div class="col-md-4">
+              <div class="online-support">
+                <div><i class="fa fa-life-ring"></i></div>
+                <div>
+                  <p>online support</p>
+                  <a href="tel:+1(555)555-28-28">+1 (555) 555 - 28 - 28</a>
+                  <a href="mail:sales@bestwebsoft.com">sales@bestwebsoft.com</a>
+                </div>
+              </div>
             </div>
-          </div>
+            
+          </div><!-- /.row -->
         </div><!-- /.container -->
       </section>
 
       <section class="footer-copyright">
-        <a href=""><img src="" alt=""></a>
-        <p>Renty Company Inc,120 CA 15th Avenue - Suite 214 California, LA</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+
+              <a href=""><img src="assets/img/logo.png" alt=""></a>
+              <p>Renty Company Inc,120 CA 15th Avenue - Suite 214 California, LA</p>
+
+            </div><!-- /.col-md-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
       </section>
     </footer>
 

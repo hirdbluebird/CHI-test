@@ -1,0 +1,68 @@
+.tab-container
+	border-radius: 4px
+	border: 1px solid #c0c0c0
+	box-shadow: 0px 0px 1px 0px #c0c0c0
+	background: white
+	.tab-pane
+		padding: 20px 40px
+.nav.nav-tabs
+	display: flex
+	li
+		width: 100%
+
+		&.active
+			border-top: 4px solid $color-orange
+		a
+			border-radius: 0px
+			border-top: 4px solid transparent
+.car-form
+	label
+		display: block
+		a
+			float: right
+	.location-wrapper
+		input[type="checkbox"]
+			display: none
+	.date-wrapper
+		display: flex
+/*************** Newsletter ***********/
+.newsletter-form
+	display: flex
+	justify-content: space-between
+	align-items: center
+	background: #434b56
+	border-radius: 4px
+	color: white
+	padding: 20px
+	p
+		margin: 0px
+	button
+		@include background-orange-gradient
+		color: white
+		font-weight: bold
+		border: 1px solid #361e0e
+		line-height: 46px
+	input
+		border: 1px solid #373e47
+		background-color: #7a8087
+		color: #d4d9e4
+.read-more
+	color: #b1b2b5
+	text-transform: uppercase
+/***************** SLIDER *********************/
+.carousel-inner
+	h2
+		color: white
+	p
+		color: #ecebeb
+	a
+		color: #d2d3d5
+.carousel-indicators
+	bottom: -20px
+	li
+		background: #c7c9cd
+		&.active
+			border: 1px solid #2c70be
+			background: linear-gradient(#70aff4, #3386ed)
+			width: 10px
+			height: 10px

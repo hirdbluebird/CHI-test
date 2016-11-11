@@ -1,0 +1,56 @@
+header,
+.navbar
+	background: white
+	border: none
+.navbar
+	margin-bottom: 0px
+	.container
+		min-height: 85px
+.navbar > .container .navbar-brand
+	margin-left: -15px
+	margin-top: 14px
+.navbar-nav
+	margin-left: 45px
+	margin-top: 24px
+.country-nav
+	margin-top: 0px
+.navbar-default .navbar-nav > li > a
+	padding: 5px
+	border-radius: 4px
+	margin: 0px 10px
+	color: $color-grey
+	&:hover
+		background-color: $color-orange
+		color: white
+.navbar-nav > li > .dropdown-menu
+	margin-top: 13px
+	padding: 0px
+	li > a
+		padding: 7px 20px
+.nav-language-menu
+	button.btn
+		@include topnav-border-property
+		background: white
+		color: #a8abb0
+		border-color: #a8abb0
+.nav-country-menu
+	button.btn
+		@include background-orange-gradient
+		@include topnav-border-property
+		color: white
+		border-color: #cc692f
+		box-shadow: inset 0px -1px 0px 1px #ee7e43
+		margin-left: 10px
+.sign-links
+	margin-top: -15px
+.signup-link,
+.signin-link
+	padding: 7px 13px
+	border-radius: 4px
+	color: white
+.signup-link
+	background-color: #7a7f88
+.signin-link
+	background-color: #c7c9cd
+	margin-right: 8px
+
