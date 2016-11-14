@@ -1,6 +1,6 @@
 //page scripts
 (function($){
-  $('').DateTimePicker();
+  $('.time-plugin-div').DateTimePicker();
 })(jQuery);
 
 

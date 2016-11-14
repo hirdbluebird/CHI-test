@@ -12,21 +12,21 @@ header,
 .navbar-nav
 	margin-left: 45px
 	margin-top: 24px
+	& > li > a
+		padding: 5px
+		border-radius: 4px
+		margin: 0px 10px
+		color: $color-grey
+		&:hover
+			background-color: $color-orange
+			color: white
+	& > li > .dropdown-menu
+		margin-top: 13px
+		padding: 0px
+		li > a
+			padding: 7px 20px
 .country-nav
 	margin-top: 0px
-.navbar-default .navbar-nav > li > a
-	padding: 5px
-	border-radius: 4px
-	margin: 0px 10px
-	color: $color-grey
-	&:hover
-		background-color: $color-orange
-		color: white
-.navbar-nav > li > .dropdown-menu
-	margin-top: 13px
-	padding: 0px
-	li > a
-		padding: 7px 20px
 .nav-language-menu
 	button.btn
 		@include topnav-border-property
