@@ -20,32 +20,34 @@ main
 	background-color: #b1b3b5
 	background-image: url(../img/main-background.jpg)
 	background-position: 200px 200px
-label + input[type="checkbox"]
-	label
-		padding-left: 27px
-		position: relative
-		&:before,
-		&:after
-			position: absolute
-			display: inline-block
-		&:before
-			content: ''
-			height: 22px
-			width: 22px
-			border: 1px solid #d2d2d2
-			box-shadow: inset 0px 0px 3px 0px #d2d2d2
-			background-color: #f9f9f9
-			border-radius: 4px
-			left: 0px
-			top: -3px
-	input
-		display: none
-label + input[type="checkbox"]:checked
-	label:after
-		content: url(../img/check.png)
-		line-height: 19px
-		color: black
-		left: 4px
+input[type="checkbox"] + label
+	padding-left: 27px
+	position: relative
+	cursor: pointer
+	color: #434b56
+	&:before,
+	&:after
+		position: absolute
+		display: inline-block
+	&:before
+		content: ''
+		height: 22px
+		width: 22px
+		border: 1px solid #d2d2d2
+		box-shadow: inset 0px 0px 3px 0px #d2d2d2
+		background-color: #f9f9f9
+		border-radius: 4px
+		left: 0px
+		top: -3px
+input[type="checkbox"]
+	display: none
+input[type="checkbox"]:checked + label:after
+	content: url(../img/check.png)
+	line-height: 19px
+	color: black
+	left: 4px
+label
+	font-weight: normal
 .date-input
 	background-image: url(../img/date-icon.png)
 	background-repeat: no-repeat
