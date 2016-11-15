@@ -3,6 +3,6 @@ node_modules/browser-sync
 node_modules/gulp
 node_modules/gulp-autoprefixer
 node_modules/gulp-cssmin
-node_modules/gulp-rename
 node_modules/gulp-sass
+node_modules/gulp-rename
 sass_cache
