@@ -32,7 +32,7 @@
 	.navbar-toggle
 		float: left
 		border: none
-		margin-top: 20px
+		margin-top: 22px
 		margin-left: 5px
 		&:focus,
 		&:hover
@@ -40,3 +40,24 @@
 		.icon-bar
 			background: #434b56
 			height: 4px
+	.footer-tweets
+		display: none
+@media screen and (max-width: 460px)
+	.book-form-section .container .row div:last-child
+		padding: 0px
+		.tab-container
+			border: none
+	.car-form
+		.date-wrapper
+			flex-direction: column
+			& > div
+				width: 100%
+		.cartype-wrapper
+			select
+				width: 100px
+	.tab-container .tab-pane
+		padding: 10px
+		min-height: 350px
+	.nav.nav-tabs li a
+		white-space: nowrap
+		text-overflow: ellipsis
