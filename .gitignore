@@ -1,2 +1,8 @@
-node_modules
+node_modules/.bin
+node_modules/browser-sync
+node_modules/gulp
+node_modules/gulp-autoprefixer
+node_modules/gulp-cssmin
+node_modules/gulp-rename
+node_modules/gulp-sass
 sass_cache
